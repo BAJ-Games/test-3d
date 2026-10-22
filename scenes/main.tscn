@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/proto_controller.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b764ehkgs5c6y" path="res://Grass.glb" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://mnrvgrqcy74g" path="res://Wall.glb" id="3_sugp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,16 +26,6 @@ environment = SubResource("Environment_0wfyh")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=855822570]
 transform = Transform3D(-0.71202606, -0.3895857, 0.5841591, 0, 0.8319541, 0.55484444, -0.702153, 0.3950637, -0.592373, 0, 0, 0)
 shadow_enabled = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=488071168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8, 1.1999999, -5.3)
-use_collision = true
-size = Vector3(3.6000001, 1.8000001, 0.2)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=164584682]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.1, 1.1999999, -7.2000003)
-use_collision = true
-size = Vector3(3.6000001, 1.8000001, 0.2)
 
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_o5qli")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.2, 1.2, -10.5)
@@ -92,3 +83,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6, 0, -10.700001)
 
 [node name="Grass15" parent="." unique_id=1593791395 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6, 0, -12.700001)
+
+[node name="Wall" parent="." unique_id=1792431160 instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.0000002, -5.8999996)
