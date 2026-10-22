@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cpxx622o2hudj"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/proto_controller.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://2hhmjri78oh6" path="res://Grassinsel.glb" id="2_0wfyh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_o5qli"]
+sky_material = SubResource("ProceduralSkyMaterial_sgp6g")
+
+[sub_resource type="Environment" id="Environment_0wfyh"]
+background_mode = 2
+sky = SubResource("Sky_o5qli")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
+size = Vector3(13.8, 1, 14.900001)
+
+[node name="Main" type="Node3D" unique_id=1946020871]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1991851395]
+environment = SubResource("Environment_0wfyh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=855822570]
+transform = Transform3D(-0.71202606, -0.3895857, 0.5841591, 0, 0.8319541, 0.55484444, -0.702153, 0.3950637, -0.592373, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=488071168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8, 1.1999999, -5.3)
+use_collision = true
+size = Vector3(3.6000001, 1.8000001, 0.2)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=164584682]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.1, 1.1999999, -7.2000003)
+use_collision = true
+size = Vector3(3.6000001, 1.8000001, 0.2)
+
+[node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_o5qli")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.2, 1.2, -10.5)
+can_sprint = true
+can_freefly = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=702241037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7, 0, -5.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1551182047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8000002, 0, -3.0500002)
+shape = SubResource("BoxShape3D_0wfyh")
+
+[node name="Grassinsel" parent="." unique_id=1424396279 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4, -0.9000001, -2.2)
