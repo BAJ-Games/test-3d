@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/proto_controller.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b764ehkgs5c6y" path="res://Grass.glb" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://da5u3rv233bqu" path="res://script/controller_test.gd" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://mnrvgrqcy74g" path="res://Wall.glb" id="3_sugp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
@@ -31,9 +32,7 @@ transform = Transform3D(-0.71202606, -0.3895857, 0.5841591, 0, 0.8319541, 0.5548
 shadow_enabled = true
 
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_o5qli")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.2, 1.2, -10.5)
-can_sprint = true
-can_freefly = true
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.2, 1.2, -10.721822)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=702241037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7, 0, -5.5)
@@ -44,6 +43,7 @@ shape = SubResource("BoxShape3D_0wfyh")
 
 [node name="Grass" parent="." unique_id=1226171197 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, 0, -4.7000003)
+script = ExtResource("3_jyhfs")
 
 [node name="Grass2" parent="." unique_id=1045138311 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, 0, -6.7000003)

@@ -43,6 +43,8 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+@export var controller_sensitivity: float = 2.5
+@export var controller_deadzone: float = 0.18
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -52,6 +54,28 @@ var freeflying : bool = false
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+
+func _process(delta: float) -> void:
+	var look_x: float = Input.get_joy_axis(
+		0, JOY_AXIS_RIGHT_X
+
+		)
+	var look_y: float = Input.get_joy_axis(
+		0, JOY_AXIS_RIGHT_Y
+	)
+
+	if abs(look_x) > controller_deadzone:
+		rotate_y(-look_x * controller_sensitivity * delta)
+
+	if abs(look_y) > controller_deadzone:
+		head.rotation.x -= (
+			look_y * controller_sensitivity * delta
+			)
+		head.rotation.x = clamp(
+			head.rotation.x,
+			deg_to_rad(-85),
+			deg_to_rad(85)
+			)
 
 func _ready() -> void:
 	check_input_mappings()
