@@ -84,5 +84,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6, 0, -10.700001)
 [node name="Grass15" parent="." unique_id=1593791395 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6, 0, -12.700001)
 
-[node name="Wall" parent="." unique_id=1792431160 instance=ExtResource("3_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.0000002, -5.8999996)
+[node name="Wall" parent="." unique_id=664652324 instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 1.9999999, -6.2000003)
