@@ -16,7 +16,10 @@ background_mode = 2
 sky = SubResource("Sky_o5qli")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
-size = Vector3(13.8, 1, 14.900001)
+size = Vector3(12.1, 0.3, 14.900001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhfpc"]
+size = Vector3(0.4, 2, 2)
 
 [node name="Main" type="Node3D" unique_id=1946020871]
 
@@ -36,7 +39,7 @@ can_freefly = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7, 0, -5.5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1551182047]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8000002, 0, -3.0500002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6500006, 0.8499999, -3.0500002)
 shape = SubResource("BoxShape3D_0wfyh")
 
 [node name="Grass" parent="." unique_id=1226171197 instance=ExtResource("2_0wfyh")]
@@ -86,3 +89,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6, 0, -12.700001)
 
 [node name="Wall" parent="." unique_id=664652324 instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2, 1.9999999, -6.2000003)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1168095941]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2113157349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -6.2)
+shape = SubResource("BoxShape3D_hhfpc")
