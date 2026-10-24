@@ -25,6 +25,8 @@ extends CharacterBody3D
 @export var jump_velocity : float = 7
 ## How fast do we run?
 @export var sprint_speed : float = 10.0
+## How fast do we run?
+@export var back_sprint_speed : float = 10.0
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
@@ -125,6 +127,9 @@ func _physics_process(delta: float) -> void:
 			move_speed = sprint_speed
 	else:
 		move_speed = base_speed
+
+	if Input.is_action_pressed(input_back) and Input.is_action_pressed(input_sprint):
+		move_speed = back_sprint_speed
 
 	# Apply desired movement to velocity
 	if can_move:
