@@ -12,9 +12,9 @@ extends CharacterBody3D
 ## Can we press to jump?
 @export var can_jump : bool = true
 ## Can we hold to run?
-@export var can_sprint : bool = false
+@export var can_sprint : bool = true
 ## Can we press to enter freefly mode (noclip)?
-@export var can_freefly : bool = false
+@export var can_freefly : bool = true
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -38,7 +38,7 @@ extends CharacterBody3D
 ## Name of Input Action to move Backward.
 @export var input_back : String = "ui_down"
 ## Name of Input Action to Jump.
-@export var input_jump : String = "ui_accept"
+@export var input_jump : String = "jump"
 ## Name of Input Action to Sprint.
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
@@ -46,7 +46,7 @@ extends CharacterBody3D
 @export var controller_sensitivity: float = 2.5
 @export var controller_deadzone: float = 0.18
 
-var mouse_captured : bool = false
+var mouse_captured : bool = true
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
@@ -79,6 +79,7 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	check_input_mappings()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 

@@ -32,7 +32,7 @@ transform = Transform3D(-0.71202606, -0.3895857, 0.5841591, 0, 0.8319541, 0.5548
 shadow_enabled = true
 
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_o5qli")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.2, 1.2, -10.721822)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10, 1, -10)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=702241037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7, 0, -5.5)
