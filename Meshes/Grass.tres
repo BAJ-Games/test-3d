@@ -1,0 +1,78 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://c6bgfq4wj6yu5"]
+
+[ext_resource type="Texture2D" uid="uid://dij635eftvqqk" path="res://Grass_Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="1_nq30w"]
+[ext_resource type="Texture2D" uid="uid://dags8by7k5xea" path="res://Grass_Poliigon_GrassPatchyGround_4585_Metallic_1K_jpg-Poliigon_GrassPatchyGround_4585_Roughness_1K_jpg.png" id="2_e6w82"]
+[ext_resource type="Texture2D" uid="uid://b5bbc4bs8s3gu" path="res://Grass_Poliigon_GrassPatchyGround_4585_Normal.png" id="3_f5jse"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdlti"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1as46"]
+resource_name = "Poliigon_GrassPatchyGround_4585_1K"
+cull_mode = 2
+albedo_texture = ExtResource("1_nq30w")
+metallic = 1.0
+metallic_texture = ExtResource("2_e6w82")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_e6w82")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_f5jse")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r3qik"]
+_surfaces = [{
+"aabb": AABB(-1, 0.69144964, -1, 2, 0.30855036, 2),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEABQAAAAIAAwAAAAUABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}, {
+"aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Poliigon_GrassPatchyGround_4585_1K",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA//8AAAAAAAAAAAAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Grass_Würfel_001"
+_surfaces = [{
+"aabb": AABB(-1, 0.69144964, -1, 2, 0.30855036, 2),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_tdlti"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v1TVVNVU1VTVVNVU1VTVVNX/v/+//7//v/+//7//v/+/qiqqKqoqqiqqKqoqqiqqKv////////////////////8AAP9/AAD/fwAA/38AAP9/")
+}, {
+"aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("/5//f//f/z//3/9//5//Pw=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_1as46"),
+"name": "Poliigon_GrassPatchyGround_4585_1K",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAA//8AAAAA/////wAAAAAAAP////8AAP//////f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r3qik")
